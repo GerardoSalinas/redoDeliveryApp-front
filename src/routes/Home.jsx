@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import NavBar from "../components/NavBar";
+import Header from "../components/Header";
 
 const Div = styled.div`
     width: 50dvw;
@@ -9,7 +11,10 @@ const Div = styled.div`
 
 function Home(){
     return (
-        <Div>hola mundo</Div>
+        <>
+            <Header></Header>
+            <NavBar></NavBar>
+        </>
     )
 }
 
