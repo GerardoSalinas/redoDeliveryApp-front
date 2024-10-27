@@ -41,6 +41,23 @@ const SlidingMenu = styled.div`
   
 `;
 
+const BtnContainer = styled.div`
+  display: flex; 
+  flex-direction: column;
+  width: 100%; 
+  gap: 1rem; 
+  margin-top: 1rem; 
+  flex: 1;
+`;
+
+const MainTitle = styled.h1`
+text-wrap: balanced; 
+font-size: 2.3rem; 
+text-align: center; 
+margin-top: 1rem; 
+
+`;
+
 function App() {
   const googleSignIn = () => { }
 
@@ -50,12 +67,12 @@ function App() {
     <>
       <BackgroundImage/>
       <SlidingMenu>
-        <h1 style={{textWrap: 'balanced', fontSize: '2.3rem', textAlign: 'center', marginTop: '1rem' }} >Quickest delivery in town!</h1>
+        <MainTitle>Quickest delivery in town!</MainTitle>
         <h4>Choose a delicious meal</h4>
-        <div id="btn-container" style={{display: 'flex', flexDirection: 'column', width: '100%', gap: '1rem', marginTop: '1rem', flex: '1'}}>
+        <BtnContainer>
           <Button src="/src/assets/google-logo.svg" text="Sign in with Google" altColor={true} onClick={googleSignIn} ></Button>
           <Button text="Other sign in options" altColor={false} onClick={regularSignIn} ></Button>
-        </div>
+        </BtnContainer>
       </SlidingMenu>
     </>
   )
